@@ -1,0 +1,168 @@
+/* Core Ionic CSS (Light-only, no dark palette imports) */
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/* Louage Live Theme */
+:root {
+  --ion-background-color: #F6F5F1;
+  --ion-text-color: #1A1A1A;
+  --ion-font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Primary: Sleek near-black buttons, not slop */
+  --ion-color-primary: #1A1A1A;
+  --ion-color-primary-rgb: 26, 26, 26;
+  --ion-color-primary-contrast: #FFFFFF;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #171717;
+  --ion-color-primary-tint: #313131;
+
+  /* Secondary: Neutral slate */
+  --ion-color-secondary: #4A4A48;
+  --ion-color-secondary-rgb: 74, 74, 72;
+  --ion-color-secondary-contrast: #FFFFFF;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #41413f;
+  --ion-color-secondary-tint: #5c5c5a;
+
+  /* Light: Warm paper card background */
+  --ion-color-light: #ECEAE4;
+  --ion-color-light-rgb: 236, 234, 228;
+  --ion-color-light-contrast: #1A1A1A;
+  --ion-color-light-contrast-rgb: 26, 26, 26;
+  --ion-color-light-shade: #D0CEC8;
+  --ion-color-light-tint: #EEEEEC;
+
+  /* Semantic Boarding: Signal yellow */
+  --ion-color-boarding: #F2B705;
+  --ion-color-boarding-rgb: 242, 183, 5;
+  --ion-color-boarding-contrast: #1A1A1A;
+  --ion-color-boarding-contrast-rgb: 26, 26, 26;
+  --ion-color-boarding-shade: #D5A104;
+  --ion-color-boarding-tint: #F3BE1E;
+
+  /* Semantic Free / Places disponibles */
+  --ion-color-free: #2E7D4F;
+  --ion-color-free-rgb: 46, 125, 79;
+  --ion-color-free-contrast: #FFFFFF;
+  --ion-color-free-contrast-rgb: 255, 255, 255;
+  --ion-color-free-shade: #296E46;
+  --ion-color-free-tint: #438A61;
+
+  /* Semantic Full / Complet */
+  --ion-color-full: #B3402A;
+  --ion-color-full-rgb: 179, 64, 42;
+  --ion-color-full-contrast: #FFFFFF;
+  --ion-color-full-contrast-rgb: 255, 255, 255;
+  --ion-color-full-shade: #9E3825;
+  --ion-color-full-tint: #BB533F;
+
+  /* Surface and card borders */
+  --app-paper-bg: #F6F5F1;
+  --app-card-bg: #FFFFFF;
+  --app-border: #E5E2D9;
+  --app-mono-font: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+}
+
+/* Color class helpers */
+.ion-color-boarding {
+  --ion-color-base: var(--ion-color-boarding);
+  --ion-color-base-rgb: var(--ion-color-boarding-rgb);
+  --ion-color-contrast: var(--ion-color-boarding-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-boarding-contrast-rgb);
+  --ion-color-shade: var(--ion-color-boarding-shade);
+  --ion-color-tint: var(--ion-color-boarding-tint);
+}
+
+.ion-color-free {
+  --ion-color-base: var(--ion-color-free);
+  --ion-color-base-rgb: var(--ion-color-free-rgb);
+  --ion-color-contrast: var(--ion-color-free-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-free-contrast-rgb);
+  --ion-color-shade: var(--ion-color-free-shade);
+  --ion-color-tint: var(--ion-color-free-tint);
+}
+
+.ion-color-full {
+  --ion-color-base: var(--ion-color-full);
+  --ion-color-base-rgb: var(--ion-color-full-rgb);
+  --ion-color-contrast: var(--ion-color-full-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-full-contrast-rgb);
+  --ion-color-shade: var(--ion-color-full-shade);
+  --ion-color-tint: var(--ion-color-full-tint);
+}
+
+/* Tabular nums for prices, timestamps, seat numbers */
+.tabular-nums, ion-note, .fare-badge, .departure-time, .seat-count {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Departure times in IBM Plex Mono */
+.departure-time, .mono-code {
+  font-family: var(--app-mono-font);
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Staff buttons ergonomic size (min-height 56px) */
+.staff-screen ion-button,
+.staff-action-button {
+  --min-height: 56px;
+  min-height: 56px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Global body & app background styling */
+html, body {
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+  font-family: var(--ion-font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+ion-card {
+  --background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  border: 1px solid var(--app-border);
+}
+
+/* Header toolbar sleek styling */
+ion-toolbar {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+  --border-color: var(--app-border);
+  --border-width: 0 0 1px 0;
+}
+
+ion-tab-bar {
+  --background: #FFFFFF;
+  --border: 1px solid var(--app-border);
+  --color: #71716E;
+  --color-selected: #1A1A1A;
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.04);
+}
+
+/* Bottom sheet modal styled cleanly */
+ion-modal.sheet-modal {
+  --border-radius: 20px 20px 0 0;
+  --background: #FFFFFF;
+}
+
+/* RTL layout adjustments */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
