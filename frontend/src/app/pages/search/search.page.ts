@@ -217,12 +217,16 @@ import {
       overflow-x: auto;
       padding: 6px 0 14px 0;
       scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
     }
     .chips-scroll::-webkit-scrollbar {
       display: none;
     }
 
     .chips-scroll ion-chip {
+      flex-shrink: 0;
+      white-space: nowrap;
+      margin: 0;
       --background: #ECEAE4;
       --color: #1A1A1A;
       font-weight: 600;

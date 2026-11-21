@@ -223,6 +223,8 @@ import {
     }
 
     .dest-segment ion-segment-button {
+      flex-shrink: 0;
+      white-space: nowrap;
       --background: #ECEAE4;
       --background-checked: #1A1A1A;
       --color: #55534E;
@@ -236,6 +238,7 @@ import {
       font-size: 0.85rem;
       text-transform: none;
       min-height: 32px;
+      padding: 0 14px;
     }
 
     .skeleton-block {

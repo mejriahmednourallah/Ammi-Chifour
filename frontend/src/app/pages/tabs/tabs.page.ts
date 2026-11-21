@@ -106,16 +106,40 @@ import { searchOutline, gridOutline, heartOutline, constructOutline, wifiOutline
     </ion-tabs>
   `,
   styles: [`
+    :host {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
     .header-shell {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 58px;
+      z-index: 100;
       background: var(--ion-background-color);
       border-bottom: 1px solid var(--app-border);
     }
 
+    ion-tabs {
+      position: absolute;
+      top: 58px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
     .main-toolbar {
+      --min-height: 58px;
+      height: 58px;
       --padding-start: 12px;
       --padding-end: 12px;
-      --padding-top: 6px;
-      --padding-bottom: 6px;
+      --padding-top: 4px;
+      --padding-bottom: 4px;
     }
 
     .brand-start {

@@ -253,10 +253,11 @@ import { timeOutline, personOutline, carSportOutline, chevronForwardOutline, inf
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #55534E;
       border-top: 1px solid #EAE7DD;
       padding-top: 8px;
+      gap: 8px;
     }
 
     .driver-tag {
@@ -264,13 +265,19 @@ import { timeOutline, personOutline, carSportOutline, chevronForwardOutline, inf
       align-items: center;
       gap: 6px;
       font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .info-btn {
       --color: #1A1A1A;
       font-weight: 600;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       margin: 0;
+      text-transform: none;
+      letter-spacing: normal;
+      flex-shrink: 0;
     }
   `]
 })
